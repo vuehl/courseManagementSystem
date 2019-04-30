@@ -1,0 +1,37 @@
+<!-- <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	environments 指mybatis可以配置多个环境,default指向默认环境
+		每个sqlsessionFactory对应一个environment
+	
+	 <properties resource="db.properties"/>
+	 <typeAliases>
+	 为指定类型指定别名，使得mapper映射文件中可以简化引用 
+	 	<typeAlias type="cn.sxt.entity.User" alias="User" />
+	 	
+		 为某个包下的所有类指定别名,默认别名是对应的类名
+	 	<package name="cn.sxt.entity"/>
+	 </typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			UNPOOLED 数据源实现只是在每次需要的时候简单的打开和关闭连接
+				POOLED 实现缓存JDBC对象，避免每次重新加载，加快相应速度
+				JNDI 配置Spring一起使用
+			
+			
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	定义映射SQL语句的文件
+	<mappers>
+		<mapper class="cn.sxt.dao.UserDao" />
+	</mappers>
+</configuration> -->

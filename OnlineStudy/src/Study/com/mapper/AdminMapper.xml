@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 防止命名重复,命名空间,对应实体类包名+mapper文件名 -->
+<mapper namespace="Study.com.mapper.AdminMapper">
+	
+	<!-- 查询单个用户， id在该文件中唯一
+		parameterType 指sql语句参数类型,
+		resultType 返回结果类型
+		useGeneratedKeys="true" 使用自增主键
+	 -->
+
+
+	<resultMap type="Study.com.model.Admin" id="AdminMap">
+		<!-- id为主键 -->
+		<id column="course_id" property="course_id"/>
+		<!-- column是数据集中表的列名 property是对应实体类的属性名 -->
+		<result column="course_name" property="course_name"/>
+		<result column="course_price" property="course_price"/>
+		<result column="course_exist" property="course_exist"/>
+		<result column="course_date" property="course_date"/>
+		<result column="course_desc" property="course_desc"/>
+		<result column="course_img" property="course_img"/>		
+	</resultMap>
+	
+	<!-- 查询所有用户 -->
+	<!-- <select id="selectAll"  parameterType="Map" resultType="User">
+		select * from user limit #{startIndex}, #{pageSize}
+	</select> -->
+	
+	<!-- 模糊查询 -->
+	<select id="getAll" resultType="Study.com.model.Admin" >
+		select course_id,course_name, course_price, course_exist, course_date
+		, course_desc, course_img from admin where course_name LIKE '%${filter}%'
+			<if test="exist=='yes' ">
+				and course_exist = true
+			</if>
+			<if test="exist=='no'  ">
+				and course_exist = false
+			</if>
+		
+		ORDER BY course_id ASC
+		
+	</select>
+	
+	<!-- 添加课程,传入参数admin -->
+	<insert id="add" parameterType="Study.com.model.Admin" useGeneratedKeys="true">
+		insert into admin(course_name, course_price, course_exist, course_date
+		, course_desc, course_img) values 
+		(#{course_name},#{course_price},#{course_exist},#{course_date},#{course_desc},#{course_img})
+	</insert>
+	
+	<!-- 更新课程信息 -->
+	<update id="update" parameterType="Study.com.model.Admin">
+		update admin set course_name=#{course_name},course_price=#{course_price},
+		course_desc=#{course_desc}, course_img=#{course_img},
+		course_exist=#{course_exist},course_date=#{course_date} where course_id=#{course_id}
+	</update>
+	
+	<!-- 删除课程 -->
+	<delete id="delete">
+		delete from admin where course_id=#{course_id}
+	</delete>
+	
+	<delete id="deleteList">
+		delete from admin where course_id in 
+		<foreach item="course_id" index="index" collection="array" open="(" separator="," close=")">
+			#{course_id}
+		</foreach>
+	</delete>
+	
+	<select id="SelectAll" resultType="Study.com.model.Admin" >
+		select course_id,course_name, course_price, course_exist, course_date
+		, course_desc, course_img from admin where course_id in
+		<foreach item="course_id" index="index" collection="ids" open="(" separator="," close=")">
+			#{course_id}
+		</foreach>
+
+	</select>
+	
+</mapper>

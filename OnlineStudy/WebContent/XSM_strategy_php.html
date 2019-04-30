@@ -1,0 +1,511 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>PHP 学习攻略</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/css/XSM_strategy_index.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--项目实战开始啦,熟悉的部分,导航部分开始啦-->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <!--这个是放logo的图片-->
+          <a href="" class="navbar-brand logo">
+            <img src="img/logo2.png" alt="">
+          </a>
+          <!--class="navbar-toggle"这个是当小屏幕时,出现可以点击的东西-->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <!--span这个里面的元素class="icon-bar"这个元素是一条横线,方便好看的-->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!--这个form要放在右边才可以让它显示在一列上面,要记住-->
+        <form class="navbar-form navbar-right">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="请输入搜索内容">
+            <div class="input-group-btn">
+              <button class="btn btn-default">提交</button>
+            </div>
+          </div>
+        </form>
+        <!--在ul外面包一个div是为了,class="collapse"这个是折叠菜单,当窗口小于多少时,就自动隐藏-->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <!-- 当屏幕放小时,ul和上面图片连接有缝隙,所以要在ul里设置margin-top:0px;才可以没有缝隙 -->
+          <ul class="nav navbar-nav navbar-right navbar-ul">
+		        <li>
+              <a href="index.jsp">
+                <span class="glyphicon glyphicon-home"></span> 首页</a>
+            </li>
+		        <li  class="active">
+              <a href="XSM_strategy_index.html">
+              <span class="glyphicon glyphicon-book"></span> 学习攻略 </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-shopping-cart"></span> 我的订单</a>
+            </li>
+            <li>
+              <a href="XSM_finance.jsp">
+                <span class="glyphicon glyphicon-usd"></span> 我的财务</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-user"></span> 登陆</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-pencil"></span> 注册</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 主要内容的部分 -->
+    <div class="body-main">
+      <!-- banner开始 -->
+      <div class="strategy-banner">
+        <!-- 大图片背景 -->
+        <div class="banner-background">
+          <div class="nav-item">
+            <h2 class="tit">三+三人行&nbsp;&nbsp;&nbsp;我们与你同在</h2>
+            <div class="top-desc-box clearfix">
+              <p class="desc-item">课程体系化</p>
+              <em class="desc-line">/</em>
+              <p class="desc-item">问答作业1V1</p>
+              <em class="desc-line">/</em>
+              <p class="desc-item">学练测一体</p>
+              <em class="desc-line">/</em>
+              <p class="desc-item">视频不限期</p>
+              <em class="desc-line">/</em>
+              <p class="desc-item">服务随开随用</p>
+            </div>
+          </div>
+        </div>
+        <!-- 学习攻略的导航栏 -->
+        <div class="banner-nav clearfix">
+          <a href="XSM_strategy_index.html" data-type="all" class="navitem">
+            <i class="navicon all"></i>
+            <span class="navtext">全部学习攻略</span>
+            <div class="navbot"></div>
+          </a>
+          <a href="XSM_strategy_web.html" data-type="fe" class="navitem">
+            <i class="navicon fe"></i>
+            <span class="navtext">Web前端攻略</span>
+            <div class="navbot"></div>
+          </a>
+          <a href="XSM_strategy_java.html" data-type="java" class="navitem">
+            <i class="navicon java"></i>
+            <span class="navtext">Java攻略</span>
+            <div class="navbot"></div>
+          </a>
+          <a href="XSM_strategy_android.html" data-type="android" class="navitem">
+            <i class="navicon android"></i>
+            <span class="navtext">Android攻略</span>
+            <div class="navbot"></div>
+          </a>
+          <a href="XSM_strategy_php.html" data-type="php" class="navitem active">
+            <i class="navicon php"></i>
+            <span class="navtext">PHP攻略</span>
+            <div class="navbot"></div>
+          </a>
+          <a href="XSM_strategy_ios.html" data-type="ios" class="navitem">
+            <i class="navicon ios"></i>
+            <span class="navtext">iOS攻略</span>
+            <div class="navbot"></div>
+          </a>
+        </div>
+      </div>
+      <!-- banner结束 -->
+
+      <!-- 自选攻略，推荐课程 -->
+      <div class="strategy-list">
+        <p class="strategy-list-title">自
+          <span>/</span>选
+          <span>/</span>攻
+          <span>/</span>略
+        </p>
+        <div class="strategy-list-box clearfix">
+          <a href="" class="list-item l" target="_blank">
+            <div class="img-box">
+              <div class="img" style="background-image: url(img/strategy/fe/fe0.jpg);"></div>
+            </div>
+            <div class="list-item-desc-box">
+              <p class="list-item-name">前端小白入门</p>
+              <div class="list-item-desc clearfix">
+                <p class="list-step-num l">5步骤／33门课</p>
+                <p class="learn-num l">
+                  <i class="imv2-set-sns"></i>2879
+                </p>
+                <div class="list-item-star l">
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                </div>
+              </div>
+              <p class="list-item-desc-content">从小白到老司机，学会HTML、CSS、JS、jQuery基础，独立开发挂号平台网页！</p>
+              <div class="price-box clearfix">
+                <p class="normal-price l">￥499.00</p>
+              </div>
+            </div>
+          </a>
+          <a href="" class="list-item l" target="_blank">
+            <div class="img-box">
+              <div class="img" style="background-image: url(img/strategy/fe/fe2.jpg);"></div>
+            </div>
+            <div class="list-item-desc-box">
+              <p class="list-item-name">HTML5与CSS3实现动态网页</p>
+              <div class="list-item-desc clearfix">
+                <p class="list-step-num l">5步骤／33门课</p>
+                <p class="learn-num l">
+                  <i class="imv2-set-sns"></i>2879
+                </p>
+                <div class="list-item-star l">
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                </div>
+              </div>
+              <p class="list-item-desc-content">通过系统学习，从“会做网页”到“实现常用的动态网页效果”的蜕变！</p>
+              <div class="price-box clearfix">
+                <p class="normal-price l">￥499.00</p>
+              </div>
+            </div>
+          </a>
+          <a href="" class="list-item l" target="_blank">
+            <div class="img-box">
+              <div class="img" style="background-image: url(img/strategy/fe/fe0.jpg);"></div>
+            </div>
+            <div class="list-item-desc-box">
+              <p class="list-item-name">前端小白入门</p>
+              <div class="list-item-desc clearfix">
+                <p class="list-step-num l">5步骤／33门课</p>
+                <p class="learn-num l">
+                  <i class="imv2-set-sns"></i>2879
+                </p>
+                <div class="list-item-star l">
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                </div>
+              </div>
+              <p class="list-item-desc-content">从小白到老司机，学会HTML、CSS、JS、jQuery基础，独立开发挂号平台网页！</p>
+              <div class="price-box clearfix">
+                <p class="normal-price l">￥499.00</p>
+              </div>
+            </div>
+          </a>
+          <a href="" class="list-item l" target="_blank">
+            <div class="img-box">
+              <div class="img" style="background-image: url(img/strategy/fe/fe2.jpg);"></div>
+            </div>
+            <div class="list-item-desc-box">
+              <p class="list-item-name">HTML5与CSS3实现动态网页</p>
+              <div class="list-item-desc clearfix">
+                <p class="list-step-num l">5步骤／33门课</p>
+                <p class="learn-num l">
+                  <i class="imv2-set-sns"></i>2879
+                </p>
+                <div class="list-item-star l">
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                </div>
+              </div>
+              <p class="list-item-desc-content">通过系统学习，从“会做网页”到“实现常用的动态网页效果”的蜕变！</p>
+              <div class="price-box clearfix">
+                <p class="normal-price l">￥499.00</p>
+              </div>
+            </div>
+          </a>
+          <a href="" class="list-item l" target="_blank">
+            <div class="img-box">
+              <div class="img" style="background-image: url(img/strategy/java/ja1.jpg);"></div>
+            </div>
+            <div class="list-item-desc-box">
+              <p class="list-item-name">Java Web入门</p>
+              <div class="list-item-desc clearfix">
+                <p class="list-step-num l">5步骤／33门课</p>
+                <p class="learn-num l">
+                  <i class="imv2-set-sns"></i>2879
+                </p>
+                <div class="list-item-star l">
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                </div>
+              </div>
+              <p class="list-item-desc-content">全面学习Java Web基础知识，大量项目案例，非常适合懂Java和前端基础的你！</p>
+              <div class="price-box clearfix">
+                <p class="normal-price l">￥499.00</p>
+              </div>
+            </div>
+          </a>
+          <a href="" class="list-item l" target="_blank">
+            <div class="img-box">
+              <div class="img" style="background-image: url(img/strategy/fe/fe2.jpg);"></div>
+            </div>
+            <div class="list-item-desc-box">
+              <p class="list-item-name">HTML5与CSS3实现动态网页</p>
+              <div class="list-item-desc clearfix">
+                <p class="list-step-num l">5步骤／33门课</p>
+                <p class="learn-num l">
+                  <i class="imv2-set-sns"></i>2879
+                </p>
+                <div class="list-item-star l">
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                </div>
+              </div>
+              <p class="list-item-desc-content">通过系统学习，从“会做网页”到“实现常用的动态网页效果”的蜕变！</p>
+              <div class="price-box clearfix">
+                <p class="normal-price l">￥499.00</p>
+              </div>
+            </div>
+          </a>
+          <a href="" class="list-item l" target="_blank">
+            <div class="img-box">
+              <div class="img" style="background-image: url(img/strategy/java/ja1.jpg);"></div>
+            </div>
+            <div class="list-item-desc-box">
+              <p class="list-item-name">Java Web入门</p>
+              <div class="list-item-desc clearfix">
+                <p class="list-step-num l">5步骤／33门课</p>
+                <p class="learn-num l">
+                  <i class="imv2-set-sns"></i>2879
+                </p>
+                <div class="list-item-star l">
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                  <i class="imv2-star on"></i>
+                </div>
+              </div>
+              <p class="list-item-desc-content">全面学习Java Web基础知识，大量项目案例，非常适合懂Java和前端基础的你！</p>
+              <div class="price-box clearfix">
+                <p class="normal-price l">￥499.00</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 组合套餐 -->
+      <div class="strategy-package-list-wrap">
+        <p class="strategy-list-title">组
+          <span>/</span>合
+          <span>/</span>套
+          <span>/</span>餐
+        </p>
+        <div class="strategy-package-item">
+          <p class="strategy-package-title">从编程小白到攻克PHP商城二次开发</p>
+          <div class="strategy-package">
+            <div class="strategy-package-box">
+              <div class="step-line-box clearfix" style="width: 310px;">
+                <span class="step-label l"></span>
+                <div class="step-bar l"></div>
+                <span class="step-label l"></span>
+              </div>
+              <div class="strategy-package-list clearfix">
+                <a href="web1.html" class="list-item l" target="_blank">
+                  <div class="img-box">
+                    <div class="img" style="background-image: url(img/strategy/fe/fe0.jpg);"></div>
+                  </div>
+                  <div class="list-item-desc-box">
+                    <p class="list-item-name">前端小白入门</p>
+                    <div class="list-item-desc clearfix">
+                      <p class="list-step-num l">5步骤／33门课</p>
+                      <p class="learn-num l">
+                        <i class="imv2-set-sns"></i>2879
+                      </p>
+                      <div class="list-item-star l">
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                      </div>
+                    </div>
+                    <div class="price-box clearfix">
+                      <p class="normal-price l">￥499.00</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="web1.html" class="list-item l" target="_blank">
+                  <div class="img-box">
+                    <div class="img" style="background-image: url(img/strategy/fe/fe0.jpg);"></div>
+                  </div>
+                  <div class="list-item-desc-box">
+                    <p class="list-item-name">前端小白入门</p>
+                    <div class="list-item-desc clearfix">
+                      <p class="list-step-num l">5步骤／33门课</p>
+                      <p class="learn-num l">
+                        <i class="imv2-set-sns"></i>2879
+                      </p>
+                      <div class="list-item-star l">
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                      </div>
+                    </div>
+                    <div class="price-box clearfix">
+                      <p class="normal-price l">￥499.00</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <a href="javascript:void(0);" target="_blank" class="package-btn buy-btn" data-gid="132">
+                购买组合
+                <span>￥998.00</span>
+              </a>
+            </div>
+            <div class=""></div>
+          </div>
+        </div>
+        <div class="strategy-package-item">
+          <p class="strategy-package-title">从编程小白到独立开发PHP系统项目</p>
+          <div class="strategy-package">
+            <div class="strategy-package-box">
+              <div class="step-line-box clearfix" style="width: 604px;">
+                <span class="step-label l"></span>
+                <div class="step-bar l"></div>
+                <span class="step-label l"></span>
+                <div class="step-bar l"></div>
+                <span class="step-label l"></span>
+              </div>
+              <div class="strategy-package-list clearfix">
+                <a href="web1.html" class="list-item l" target="_blank">
+                  <div class="img-box">
+                    <div class="img" style="background-image: url(img/strategy/fe/fe0.jpg);"></div>
+                  </div>
+                  <div class="list-item-desc-box">
+                    <p class="list-item-name">前端小白入门</p>
+                    <div class="list-item-desc clearfix">
+                      <p class="list-step-num l">5步骤／33门课</p>
+                      <p class="learn-num l">
+                        <i class="imv2-set-sns"></i>2879
+                      </p>
+                      <div class="list-item-star l">
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                      </div>
+                    </div>
+                    <div class="price-box clearfix">
+                      <p class="normal-price l">￥499.00</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="web1.html" class="list-item l" target="_blank">
+                  <div class="img-box">
+                    <div class="img" style="background-image: url(img/strategy/fe/fe0.jpg);"></div>
+                  </div>
+                  <div class="list-item-desc-box">
+                    <p class="list-item-name">前端小白入门</p>
+                    <div class="list-item-desc clearfix">
+                      <p class="list-step-num l">5步骤／33门课</p>
+                      <p class="learn-num l">
+                        <i class="imv2-set-sns"></i>2879
+                      </p>
+                      <div class="list-item-star l">
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                      </div>
+                    </div>
+                    <div class="price-box clearfix">
+                      <p class="normal-price l">￥499.00</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="web1.html" class="list-item l" target="_blank">
+                  <div class="img-box">
+                    <div class="img" style="background-image: url(img/strategy/fe/fe0.jpg);"></div>
+                  </div>
+                  <div class="list-item-desc-box">
+                    <p class="list-item-name">前端小白入门</p>
+                    <div class="list-item-desc clearfix">
+                      <p class="list-step-num l">5步骤／33门课</p>
+                      <p class="learn-num l">
+                        <i class="imv2-set-sns"></i>2879
+                      </p>
+                      <div class="list-item-star l">
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                        <i class="imv2-star on"></i>
+                      </div>
+                    </div>
+                    <div class="price-box clearfix">
+                      <p class="normal-price l">￥499.00</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <a href="javascript:void(0);" target="_blank" class="package-btn buy-btn" data-gid="132">
+                购买组合
+                <span>￥998.00</span>
+              </a>
+            </div>
+            <div class=""></div>
+          </div>
+        </div>
+        <p class="package-buy-tip">已优惠的路径组合不接受换课和退课，请购买前知晓</p>
+      </div>
+
+    </div>
+
+    <!-- 回到顶部的固定部分 -->
+    <div id="GoToTop" class="elevator"></div>
+
+    <!-- 底部的部分，项目版权和团队联系 -->
+    <footer id="footer">
+      <div class="container">
+        <P class="footer-item">企业培训 | 合作事宜 | 企业投诉</P>
+        <P class="footer-item">@2017 团队联系 - 三+三人行在线教育</P>
+      </div>
+    </footer>
+
+    <!-- jQuery 的部分,要放在BootStrap的框架前面,才可以使用-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/js/index.js" type="text/javascript"></script>
+    <script type="text/javascript"></script>
+  </body>
+</html>

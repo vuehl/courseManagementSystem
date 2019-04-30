@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Study.com.dao.FinanceMapper">
+
+	<insert id="insertBill" parameterType="Study.com.model.Bill">
+		insert into bill values(#{bill_type},#{bill_datetime},#{bill_money},#{bill_detail})
+	</insert>
+	
+	<delete id="deleteBill" parameterType="java.lang.Integer">
+		delete from bill where bill_id=#{bill_id}
+	</delete>
+	
+	<select id="selectBills" resultType="Study.com.model.Bill">
+		select from bill
+	</select>
+	
+	<update id="updateLearningCoin" parameterType="java.lang.Integer">
+		update user_table set learningCoin=#{money} where ID=2
+	</update>
+	
+	<select id="selectLearningCoin" resultType="java.lang.Integer">
+		select from user_table where ID=2
+	</select>
+
+</mapper>

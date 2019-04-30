@@ -1,0 +1,131 @@
+@charset "utf-8";
+	#whole {
+		margin: -30px auto;
+		width: 1300px;
+		height: 600px;
+	}
+	#welcome {
+		margin: 0 auto;
+		height: 150px;
+		font-family: "隶书";
+		font-size: 50px;
+		position: relative;
+	}
+
+	#welcome table tr td p {
+     	width: 400px;
+     	height: 120px;
+     	line-height: 120px;
+     	position: relative;
+     	
+     }
+
+     #welcome table tr td p img {
+     	position: absolute;
+        top: 20px;
+        left: 220px;
+     }
+	#rejist {
+		margin: 0 auto;
+		width: 1000px;
+		height: 466px;
+		background-image: url('../../img/1.jpg');
+	}
+	#aa {
+		margin: 0 auto;
+		width: 1000px;
+		height: 33px;
+		background-color: rgba(235,235,235,0);
+	}
+	#bb{
+		margin: 0 auto;
+		width: 1000px;
+		height: 400px;
+		background-color: rgba(235,235,235,0);
+
+	}
+	#cc {
+		margin: 0 auto;
+		width: 1000px;
+		height: 33px;
+		background-color: rgba(235,235,235,0);
+	}
+	#a {
+		margin: 0 auto;
+		width: 330px;
+		height:400px;
+		float: left;
+	}
+	#b {
+		margin: 0 auto;
+		width: 280px;
+		height:400px;
+		float: left;
+	}
+	#c {
+		margin: 0 auto;
+		width: 330px;
+		height:400px;
+		float: left;
+		background-color: rgba(235,235,235,0.5);
+		position: relative;
+
+	}
+	#d {
+		margin: 0 auto;
+		width: 330px;
+		height:66px;
+		
+		
+	}
+	#e {
+		margin: 0 auto;
+		width: 280px;
+		height:66px;
+		
+		padding-left: 50px;
+	}
+
+    #e input {
+    	text-indent: 10px;
+    }
+
+	#f {
+		margin: 0 auto;
+		width: 280px;
+		height:66px;
+		padding-left: 50px;
+
+	}
+
+	#f input {
+		text-indent: 10px;
+	}
+	#g {
+		margin: 50px auto;
+		width: 240px;
+		height:66px;
+		padding-left: 50px;
+		padding-right: 40px;
+
+
+	}
+
+	#h {
+		margin: 0 auto;
+		width: 280px;
+		height:66px;
+		position: absolute;
+		top: 230px;
+		left: 120px;
+
+
+	}
+	#m {
+		margin: -50px auto;
+		width: 200px;
+		height:66px;
+		padding-left: 130px;
+
+		
+	}

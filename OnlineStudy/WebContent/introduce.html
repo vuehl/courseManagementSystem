@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>学习攻略</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/css/index.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--项目实战开始啦,熟悉的部分,导航部分开始啦-->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+        
+        <!--这个是放logo的图片-->
+        <a href="" class="navbar-brand logo">
+        <img src="img/logo2.png" alt="">
+        </a>
+        <!--class="navbar-toggle"这个是当小屏幕时,出现可以点击的东西-->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+          <!--span这个里面的元素class="icon-bar"这个元素是一条横线,方便好看的的-->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        </div>
+
+
+          <!--这个form要放在右边才可以让它显示在一列上面,要记住-->
+          <form class="navbar-form navbar-right">
+                <div class="input-group">
+                <input type="text" class="form-control" 
+                placeholder="请输入搜索内容">
+                <div class="input-group-btn">
+                <button class="btn btn-default">提交</button>
+                </div>
+                </div>
+                </form>
+
+        <!--在ul外面包一个div是为了,class="collapse"这个是折叠菜单,当窗口小于多少时,就自动隐藏-->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+        <!--当屏幕放小时,ul和上面图片连接有缝隙,所以要在ul里设置margin-top:0px;才可以没有缝隙-->
+        <ul class="nav navbar-nav navbar-right navbar-ul">
+
+		<li>
+          <a href="index.html">
+          <span class="glyphicon glyphicon-home"></span> 首页</a>
+         </li>
+		  
+		  <li  class="active">
+          <a href="introduce.html">
+          <span class="glyphicon glyphicon-book"></span> 学习攻略 </a>
+          </li>
+
+          <li>
+          <a href="#">
+        <span class="glyphicon glyphicon-shopping-cart"></span> 我的订单</a>
+          </li>
+          
+
+          <li>
+          <a href="#">
+        <span class="glyphicon glyphicon-usd"></span> 我的财务</a>
+          </li>
+
+
+          <li>
+          <a href="#">
+          <span class="glyphicon glyphicon-user"></span> 登陆
+          </a></li>
+          <li>
+          <a href="#">
+          <span class="glyphicon glyphicon-pencil"></span> 注册</a>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+
+	<div style="margin-top:30px;"></div>
+
+    <footer id="footer">
+      <div class="container">
+        <P>企业培训 | 合作事宜 | 企业投诉</P>
+        <P>@2017 团队联系 - 三+三人行在线教育</P>
+      </div>
+    </footer>
+
+
+    <!-- jQuery 的部分,要放在BootStrap的框架前面,才可以使用-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/js/index.js" type="text/javascript"></script>
+  </body>
+</html>

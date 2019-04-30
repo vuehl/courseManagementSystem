@@ -1,0 +1,66 @@
+
+
+/* bootstrap状态修正 */
+.table th
+{
+	font-size: 12px;
+	text-align: center;
+}
+.table td
+{
+	text-align: center;
+	font-size: 14px;
+}
+
+
+/* 通用输入控件 */
+.common-label
+{
+	font-size: 14px;
+	width: 80px;
+	font-weight: normal;
+	text-align: left;
+	color: #666;
+}
+.common-input
+{
+	border-radius: 2px;
+	margin: 4px 20px 0px 0px;
+	border: 1px solid #ccc;
+	height: 28px;
+	min-width: 250px;
+	padding: 0px 4px;
+}
+.common-checkbox
+{
+	border-radius: 1px;
+	width: 20px;
+	height: 20px;
+}
+.common-textarea
+{
+	border-radius: 1px;
+	margin: 10px 20px 0px 0px;
+	border: 1px solid #ccc;
+	height: 100px;
+	min-width: 400px;
+	padding: 0px 4px;
+}
+.common-select
+{
+	border-radius: 2px;
+	margin: 10px 20px 0px 0px;
+	border: 1px solid #ccc;
+	height: 28px;
+	min-width: 200px;
+	padding: 0px 4px;
+}
+.common-label
+{
+	font-size: 14px;
+	width: 80px;
+	font-weight: normal;
+	text-align: left;
+	color: #666;
+}
+

@@ -1,0 +1,40 @@
+﻿@charset "utf-8";
+/*这个是导航部分的代码,在上面的那个要加上分号,否则会出错*/
+.logo {
+  padding:0;
+}
+.navbar-ul {
+  margin-top:0px;
+}
+
+/*这个是课程的部分*/
+#HL_current {
+  margin:80px auto;
+  color:#666;
+}
+
+
+/*这个是分页的部分*/
+#HL_nav {
+	position: relative;
+	margin:20px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*这个是页脚的部分,响应式布局一般不写高度,应为会自动有高度,宽度也一般不用设置*/
+#footer {
+ color:#999;
+ text-align:center;
+ padding:20px;
+}
